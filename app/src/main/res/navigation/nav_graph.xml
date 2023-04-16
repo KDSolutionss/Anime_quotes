@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.individualproject.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_jokesList"
+            app:destination="@id/jokesList" />
+        <action
+            android:id="@+id/action_startFragment_to_favsFragment"
+            app:destination="@id/favsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokesList"
+        android:name="com.example.individualproject.JokesList"
+        android:label="fragment_jokes_list"
+        tools:layout="@layout/fragment_jokes_list" />
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:label="app_name"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+    <fragment
+        android:id="@+id/favsFragment"
+        android:name="com.example.individualproject.FavsFragment"
+        android:label="FavsFragment" />
+</navigation>
